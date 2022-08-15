@@ -17,7 +17,6 @@ app_secret = os.environ["APP_SECRET"]
 user_id = os.environ["USER_ID"]
 user_id2 = os.environ["USER_ID2"]
 template_id = os.environ["TEMPLATE_ID"]
-user_ids = os.environ["USER_IDS"]
 
 
 
@@ -27,8 +26,6 @@ def get_weather():
   weather = res['data']['list'][0]
   
   print(weather)
-  for user in user_ids:
-    print(user)
   
   return weather['weather'], math.floor(weather['temp'])
 
